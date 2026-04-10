@@ -1,0 +1,13 @@
+<?php
+$host = 'dingchunru.cn';
+$dbname = 'OA_db';
+$username = 'dingchunru';
+$password = '7259.Dcr.';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    die("数据库连接失败: " . $e->getMessage());
+}
+?>
